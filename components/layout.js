@@ -1,73 +1,59 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import { HeaderAni } from "./miscComponents";
+import Link from "next/link";
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+const name = "Fidel Sanchez-Bueno";
+export const siteTitle = "Personal website - Fidel Sanchez-Bueno";
+const siteDescription = "Personal website - Fidel Sanchez-Bueno";
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.body}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
+        <meta name="description" content={siteDescription} />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <input id="menu-toggle" className={styles.menuToggle} type="checkbox" />
+      <label className={styles.menuButtonContainer} htmlFor="menu-toggle">
+        <div className={styles.menuButton}></div>
+      </label>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+        <div className={styles.headerContainer}>
+          <div className={styles.headerSection}>
+            <div className={styles.logoContainer}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <div className={styles.logoContainerInner}>
+                  <HeaderAni />
+                </div>
               </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+              <div className={styles.hamburguerMenuShadow}></div>
+            </div>
+            <div className={styles.routesContainer}>
+              <div className={styles.routesSection}>
+                <Link href="/app">
+                  <a>App</a>
+                </Link>
+              </div>
+              <div className={styles.routesSection}>
+                <Link href="/about/">
+                  <a>About</a>
+                </Link>
+              </div>
+              <div className={styles.routesSection}>
+                <Link href="/contact/">
+                  <a>Contact</a>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      )}
+      </header>
+      <main className={styles.main}>{children}</main>
+      <footer className={styles.footer}></footer>
     </div>
-  )
+  );
 }
