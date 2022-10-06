@@ -12,7 +12,6 @@ export default function Home() {
 
       <section className={`${styles.section} ${styles.aboutMe}`}>
         <h2>About Me</h2>
-        <div className={styles.test} />
       </section>
       <section className={`${styles.section} ${styles.experience}`}>
         <h2>Experience</h2>
