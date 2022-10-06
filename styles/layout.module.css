@@ -14,10 +14,15 @@
   align-items: center;
   justify-content: center;
 }
+.header > h1 {
+  color: #e1dbd6;
+  font-size: clamp(0.8rem, 5vw, 1.8rem);
+  margin-bottom: 50px;
+}
 .headerContainer {
   display: flex;
-  flex-flow: row wrap;
-  font-size: clamp(0.6rem, 2vw, 1.2rem);
+  flex-flow: row nowrap;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   font-weight: bold;
   align-items: center;
   justify-content: center;
@@ -28,8 +33,10 @@
   min-width: 300px;
   max-width: 700px;
   max-height: 500px;
+  margin: 20px;
 }
 .profilePicContainer {
+  max-width: 70%;
 }
 
 .header,
@@ -84,6 +91,11 @@
 
 /* devices less than 640px */
 @media (max-width: 639.98px) {
+  .headerContainer {
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 /* devices less than 1008px */
 @media (max-width: 1006.98px) {
