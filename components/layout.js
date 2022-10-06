@@ -47,12 +47,16 @@ export default function Layout({ children, home }) {
       </header>
       <main className={styles.main}>
         <div className={styles.mainTop}>
-          <img className={styles.waveTop} src={waveImg} alt="wave background" />
+          <img
+            className={`${styles.wave} ${styles.waveTop}`}
+            src={waveImg}
+            alt="wave background"
+          />
         </div>
         <div className={styles.mainCenter}>{children}</div>
         <div className={styles.mainBottom}>
           <img
-            className={styles.waveBottom}
+            className={`${styles.wave} ${styles.waveBottom}`}
             src={waveImg}
             alt="wave background"
           />
