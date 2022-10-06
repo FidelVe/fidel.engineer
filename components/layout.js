@@ -18,7 +18,33 @@ export default function Layout({ children, home }) {
         <meta name="description" content={siteDescription} />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={styles.header}></header>
+      <header className={styles.header}>
+        <h1>Fidel Sanchez-Bueno / Developer</h1>
+        <div className={styles.headerContainer}>
+          <div className={styles.headerInfoCointainer}>
+            <p>
+              Graduated in Chemical Engineering, I&apos;m a Software Developer
+              with experience in web development (both frontend and backend),
+              currently focused on web3 and blockchain related projects. I have
+              experience maintaining and setting up PoS nodes on Linux servers,
+              I&apos;m very comfortable working on Linux environments. I have
+              been a linux power user for about 15 years, I&apos;m very familiar
+              with docker, SSH, the linux terminal and linux systems overall,
+              etc.
+            </p>
+          </div>
+          <div className={styles.profilePicContainer}>
+            <Image
+              priority
+              src="/images/profile-pic.jpeg"
+              className={utilStyles.borderCircle}
+              height={374}
+              width={374}
+              alt={name}
+            />
+          </div>
+        </div>
+      </header>
       <main className={styles.main}>
         <div className={styles.mainTop}>
           <img className={styles.waveTop} src={waveImg} alt="wave background" />
