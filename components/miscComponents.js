@@ -72,3 +72,14 @@ export function HeaderAni() {
     </div>
   );
 }
+
+export function ExpBox({ title, company, timeframe, children }) {
+  return (
+    <div className={styles.expContainer}>
+      <p className={styles.expTitle}>{title}</p>
+      <p className={styles.expCompany}>{company}</p>
+      <p className={styles.timeframe}>{timeframe}</p>
+      {children}
+    </div>
+  );
+}

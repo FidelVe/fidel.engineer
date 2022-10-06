@@ -7,3 +7,28 @@
   align-items: flex-start;
   font-family: monospace;
 }
+
+.expContainer {
+  align-self: center;
+  padding: 10px;
+  background-color: rgba(0, 153, 255, 0.2);
+  /* width: 80%; */
+  /* max-width: 800px; */
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.expTitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.expCompany {
+  margin: 0;
+  font-style: italic;
+  color: #000bd6;
+}
+.timeframe {
+  margin: 0;
+  font-style: italic;
+  color: #4e4e4e;
+}
