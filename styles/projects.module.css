@@ -1,0 +1,22 @@
+.reelContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.logoContainer {
+  background-color: #fff;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 4px;
+  max-height: 120px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  max-height: 100px;
+  height: 100%;
+  max-width: 300px;
+}

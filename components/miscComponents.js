@@ -83,3 +83,21 @@ export function ExpBox({ title, company, timeframe, children }) {
     </div>
   );
 }
+
+export function ProjectBox({ title, arrayOfItems, children }) {
+  return (
+    <div className={styles.expContainer}>
+      <p className={styles.expTitle}>{title}</p>
+      <div className={styles.reelContainer}>
+        {arrayOfItems.map((itemObj, index) => {
+          return (
+            <div className={styles.imgContainer} key={`ximg-${index}`}>
+              <img className={styles.smallImg} src={itemObj.src} />
+            </div>
+          );
+        })}
+      </div>
+      {children}
+    </div>
+  );
+}

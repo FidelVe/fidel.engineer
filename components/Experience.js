@@ -1,5 +1,12 @@
-import { ExpBox } from "./miscComponents";
+import { ExpBox, ProjectBox } from "./miscComponents";
 import styles from "../styles/experience.module.css";
+
+const imgSrc = {
+  github: "/images/logo-github.png",
+  website: "/images/image-website.svg",
+  report: "/images/img-report.svg"
+};
+
 
 export default function Experience() {
   return (
