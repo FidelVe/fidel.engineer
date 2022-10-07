@@ -30,12 +30,9 @@ export default function Layout({ children, home }) {
             </p>
           </div>
           <div className={styles.profilePicContainer}>
-            <Image
-              priority
+            <img
               src="/images/profile-pic.jpeg"
               className={utilStyles.borderCircle}
-              height={374}
-              width={374}
               alt={name}
             />
           </div>

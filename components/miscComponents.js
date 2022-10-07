@@ -92,7 +92,9 @@ export function ProjectBox({ title, arrayOfItems, children }) {
         {arrayOfItems.map((itemObj, index) => {
           return (
             <div className={styles.imgContainer} key={`ximg-${index}`}>
-              <img className={styles.smallImg} src={itemObj.src} />
+              <a href={itemObj.link} target="_blank" rel="noopener noreferrer">
+                <img className={styles.smallImg} src={itemObj.src} />
+              </a>
             </div>
           );
         })}
